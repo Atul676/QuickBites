@@ -10,17 +10,17 @@
     <header>
       <nav class="navbar navbar-expand-md bg-danger fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">QuickBite</a>
-          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+          <a class="navbar-brand" href="#index.html">QuickBite</a>
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="menu">
+          <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Restaurants</a>
+                <a class="nav-link active" href="#" aria-current="page">Restaurants</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
+                <a class="nav-link" href="#menu">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Checkout</a>
@@ -101,11 +101,7 @@
       <div class="row g-3">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
-            <img
-              src="images/pizza_hut.jpg"
-              class="card-img-top"
-              alt="pizza_hut"
-              style="height: 300px; object-fit: cover" />
+            <img src="images/pizza_hut.jpg" class="card-img-top object-fit-cover" alt="pizza_hut" height="300px" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Pizza Hut</h5>
@@ -122,9 +118,9 @@
           <div class="card h-100">
             <img
               src="images/geetham.png"
-              class="card-img-top"
+              class="card-img-top object-fit-cover"
               alt="Geetham Restaurant"
-              style="height: 300px; object-fit: cover" />
+              height="300px" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Geetham Veg Restaurant</h5>
@@ -139,7 +135,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
-            <img src="images/dum.jpg" class="card-img-top" alt="Dum biryani" style="height: 300px; object-fit: cover" />
+            <img src="images/dum.jpg" class="card-img-top object-fit-cover" alt="Dum biryani" height="300px" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Dum Safar Biryani</h5>
@@ -150,6 +146,131 @@
               <span class="badge text-bg-warning text-dark">4.5 ★</span>
             </div>
             <button class="btn btn-danger w-100 rounder-1">View Menu</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4" id="menu">
+        <div class="row">
+          <div class="col-8">
+            <ul class="nav nav-tabs nav-fill">
+              <li class="nav-item">
+                <a href="#menu_section" class="nav-link active px-2 fs-5" data-bs-toggle="tab">Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#review" class="nav-link px-2 fs-5" data-bs-toggle="tab">Reviews</a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane container active table-responsive" id="menu_section">
+                <table class="table border mt-2 table-hover table-striped">
+                  <tr>
+                    <th class="fs-4">Dish</th>
+                    <th class="fs-4">Type</th>
+                    <th class="fs-4">Price (Rs.)</th>
+                    <th class="fs-4">Add To Cart</th>
+                  </tr>
+                  <tr>
+                    <td class="fs-6">Dosa</td>
+                    <td><span class="badge text-bg-success">Veg</span></td>
+                    <td class="fs-6">70</td>
+                    <td>
+                      <button class="btn btn-primary">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fs-6">Chicken Biryani</td>
+                    <td><span class="badge text-bg-danger">Non-Veg</span></td>
+                    <td class="fs-6">220</td>
+                    <td>
+                      <button class="btn btn-primary">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fs-6">Margherita Pizza</td>
+                    <td><span class="badge text-bg-success">Veg</span></td>
+                    <td class="fs-6">100</td>
+                    <td>
+                      <button class="btn btn-primary">Add</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fs-6">Shawarma</td>
+                    <td><span class="badge text-bg-danger">Non-Veg</span></td>
+                    <td class="fs-6">150</td>
+                    <td>
+                      <button class="btn btn-primary">Add</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="tab-pane container fade" id="review">
+                <div class="d-flex mt-3 border border-1 border-dark-subtle p-2">
+                  <img
+                    src="images/random_guy_1.jpg"
+                    alt="random_guy"
+                    class="flex-shrink-0 rounded-circle ms-2 border border-3 border-black object-fit-cover"
+                    width="128"
+                    height="128" />
+                  <div class="flex-grow-1 ms-4">
+                    <h1 class="mt-0">Sam</h1>
+                    <p>
+                      Absolutely loved the food! The biryani was delicious, perfectly cooked, and delivered on time.
+                      Definitely ordering again!
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex mt-3 border border-1 border-dark-subtle p-2">
+                  <img
+                    src="images/random_girl_1.jpg"
+                    alt="random_girl"
+                    class="flex-shrink-0 rounded-circle me-2 border border-3 border-black object-fit-cover"
+                    width="128"
+                    height="128" />
+                  <div class="flex-grow-1 ms-4">
+                    <h1 class="mt-0">Priya</h1>
+                    <p>
+                      Great experience! The food was fresh, the packaging was neat, and the desserts were amazing.
+                      Highly recommended!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 border border-1 rounded">
+            <h2 class="display-4"><u>Cart</u></h2>
+            <div class="container mt-4 mb-4">
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                  <p class="fs-5">Dosa</p>
+                  <span class="badge text-bg-info rounded-4 p-3 fs-6">6</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <p class="fs-5">Shawarma</p>
+                  <span class="badge text-bg-info rounded-4 p-3 fs-6">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <p class="fs-5">Chicken Biryani</p>
+                  <span class="badge text-bg-info rounded-4 p-3 fs-6">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between border-top">
+                  <p class="fs-3">Total:</p>
+                  <span class="badge text-bg-info fs-4 p-3">1160</span>
+                </li>
+              </ul>
+              <a
+                href="#"
+                title="Offer Terms"
+                data-bs-toggle="popover"
+                data-bs-placement="bottom"
+                data-bs-content="Get 50% off on your order up to Rs. 150. Valid only on Chicken Biryani and Dum Safar Biryani. Applicable for a limited time only.">
+                Apply offer: BIRYANI50
+              </a>
+            </div>
           </div>
         </div>
       </div>
