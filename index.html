@@ -9,9 +9,10 @@
 
   <body class="bg-light">
     <header>
+      <!-- NavBar -->
       <nav class="navbar navbar-expand-md bg-danger fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#index.html">QuickBite</a>
+          <a class="navbar-brand" href="#">QuickBite</a>
           <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,29 +33,29 @@
                 <a class="nav-link" href="#Checkout">Checkout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Track Order</a>
+                <a class="nav-link" href="#tracking">Track Order</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+
     <main class="container my-4 pt-5">
+      <!-- Carousel -->
       <div id="carousel-food" class="carousel slide mt-3 mb-3 carousel-dark" data-bs-ride="carousel">
         <div class="carousel-indicators mt-2 mb-0">
           <button type="button" data-bs-target="#carousel-food" data-bs-slide-to="0" class="active bg-danger"></button>
-
           <button type="button" data-bs-target="#carousel-food" data-bs-slide-to="1" class="bg-danger"></button>
-
           <button type="button" data-bs-target="#carousel-food" data-bs-slide-to="2" class="bg-danger"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="col-12 col-md-6 mx-auto">
               <div class="card">
-                <img src="images/biryani.png" class="d-block w-100 rounder-1 card-img-top" alt="Biryani" />
+                <img src="images/biryani.png" class="d-block w-100 card-img-top" alt="Biryani" />
                 <div class="card-body text-center">
-                  <span class="badge text-bg-danger fs-3 px-4 py-2 rounded-pill">50% OFF</span>
+                  <h5><span class="badge text-bg-danger fs-3 px-4 py-2 rounded-pill">50% OFF on Biryani</span></h5>
                   <p class="text-muted mt-2 mb-0">Limited time offer</p>
                 </div>
               </div>
@@ -63,9 +64,9 @@
           <div class="carousel-item">
             <div class="col-12 col-md-6 mx-auto">
               <div class="card">
-                <img src="images/free_delivery.jpg" class="d-block w-100 rounder-1 card-img-top" alt="Free Delivery" />
+                <img src="images/free_delivery.jpg" class="d-block w-100 card-img-top" alt="Free Delivery" />
                 <div class="card-body text-center">
-                  <span class="badge text-bg-danger fs-3 px-4 py-2 rounded-pill">FREE DELIVERY</span>
+                  <h5><span class="badge text-bg-danger fs-3 px-4 py-2 rounded-pill">FREE DELIVERY</span></h5>
                   <p class="text-muted mt-2 mb-0">On all orders above Rs 299</p>
                 </div>
               </div>
@@ -74,13 +75,9 @@
           <div class="carousel-item">
             <div class="col-12 col-md-6 mx-auto">
               <div class="card">
-                <img src="images/dessert.jpg" class="d-block w-100 rounder-1 card-img-top" alt="Dessert" />
+                <img src="images/dessert.jpg" class="d-block w-100 card-img-top" alt="Dessert" />
                 <div class="card-body text-center">
-                  <span class="badge text-bg-danger fs-6 fs-md-5 px-3 py-2 rounded-pill">
-                    Dessert Prices start from
-                    <br />
-                    Rs 99 onwards
-                  </span>
+                  <h5><span class="badge text-bg-danger fs-3 px-4 py-2 rounded-pill">Desserts from Rs 99</span></h5>
                   <p class="text-muted mt-2 mb-0">Applicable on dine-in & takeaway</p>
                 </div>
               </div>
@@ -105,28 +102,27 @@
       </div>
 
       <div class="row g-3">
+        <!-- Pizza Hut Card -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
-            <img src="images/pizza_hut.jpg" class="card-img-top object-fit-cover" alt="pizza_hut" height="300px" />
+            <img src="images/pizza_hut.jpg" class="card-img-top object-fit-cover" alt="pizza_hut" height="200" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Pizza Hut</h5>
-                <span class="badge text-bg-info">All</span>
+                <span class="badge text-bg-danger">Non-Veg</span>
               </div>
               <h6 class="card-subtitle text-muted mb-2">Western</h6>
               <p class="card-text text-secondary small">30-35 mins</p>
               <span class="badge text-bg-warning text-dark">4.8 ★</span>
             </div>
-            <button class="btn btn-danger w-100 rounder-1">View Menu</button>
+            <button class="btn btn-danger w-100 rounded-1">View Menu</button>
           </div>
         </div>
+
+        <!-- Geetham Card -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
-            <img
-              src="images/geetham.png"
-              class="card-img-top object-fit-cover"
-              alt="Geetham Restaurant"
-              height="300px" />
+            <img src="images/geetham.png" class="card-img-top object-fit-cover" alt="Geetham Restaurant" height="200" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Geetham Veg Restaurant</h5>
@@ -136,12 +132,14 @@
               <p class="card-text text-secondary small">10-15 mins</p>
               <span class="badge text-bg-warning text-dark">4.9 ★</span>
             </div>
-            <button class="btn btn-danger w-100 rounder-1">View Menu</button>
+            <button class="btn btn-danger w-100 rounded-1">View Menu</button>
           </div>
         </div>
+
+        <!-- Dum Safar Biryani Card -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100">
-            <img src="images/dum.jpg" class="card-img-top object-fit-cover" alt="Dum biryani" height="300px" />
+            <img src="images/dum.jpg" class="card-img-top object-fit-cover" alt="Dum biryani" height="200" />
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
                 <h5 class="card-title mb-0">Dum Safar Biryani</h5>
@@ -151,14 +149,15 @@
               <p class="card-text text-secondary small">45-55 mins</p>
               <span class="badge text-bg-warning text-dark">4.5 ★</span>
             </div>
-            <button class="btn btn-danger w-100 rounder-1">View Menu</button>
+            <button class="btn btn-danger w-100 rounded-1">View Menu</button>
           </div>
         </div>
       </div>
 
+      <!-- Menu & Review section -->
       <div class="container mt-4" id="menu">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 col-md-8">
             <ul class="nav nav-tabs nav-fill">
               <li class="nav-item">
                 <a href="#menu_section" class="nav-link active px-2 fs-5" data-bs-toggle="tab">Menu</a>
@@ -172,73 +171,82 @@
             <div class="tab-content">
               <div class="tab-pane container active table-responsive" id="menu_section">
                 <table class="table border mt-2 table-hover table-striped">
-                  <tr>
-                    <th class="fs-4">Dish</th>
-                    <th class="fs-4">Type</th>
-                    <th class="fs-4">Price (Rs.)</th>
-                    <th class="fs-4">Add To Cart</th>
-                  </tr>
-                  <tr>
-                    <td class="fs-6">Dosa</td>
-                    <td><span class="badge text-bg-success">Veg</span></td>
-                    <td class="fs-6">70</td>
-                    <td>
-                      <button class="btn btn-primary">Add</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="fs-6">Chicken Biryani</td>
-                    <td><span class="badge text-bg-danger">Non-Veg</span></td>
-                    <td class="fs-6">220</td>
-                    <td>
-                      <button class="btn btn-primary">Add</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="fs-6">Margherita Pizza</td>
-                    <td><span class="badge text-bg-success">Veg</span></td>
-                    <td class="fs-6">100</td>
-                    <td>
-                      <button class="btn btn-primary">Add</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="fs-6">Shawarma</td>
-                    <td><span class="badge text-bg-danger">Non-Veg</span></td>
-                    <td class="fs-6">150</td>
-                    <td>
-                      <button class="btn btn-primary">Add</button>
-                    </td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th class="fs-4">Dish</th>
+                      <th class="fs-4">Type</th>
+                      <th class="fs-4">Price (Rs.)</th>
+                      <th class="fs-4">Add To Cart</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fs-6">Dosa</td>
+                      <td><span class="badge text-bg-success">Veg</span></td>
+                      <td class="fs-6">70</td>
+                      <td>
+                        <button class="btn btn-primary">Add</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fs-6">Chicken Biryani</td>
+                      <td><span class="badge text-bg-danger">Non-Veg</span></td>
+                      <td class="fs-6">220</td>
+                      <td>
+                        <button class="btn btn-primary">Add</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fs-6">Margherita Pizza</td>
+                      <td><span class="badge text-bg-success">Veg</span></td>
+                      <td class="fs-6">100</td>
+                      <td>
+                        <button class="btn btn-primary">Add</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fs-6">Shawarma</td>
+                      <td><span class="badge text-bg-danger">Non-Veg</span></td>
+                      <td class="fs-6">150</td>
+                      <td>
+                        <button class="btn btn-primary">Add</button>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
 
               <div class="tab-pane container fade" id="review">
-                <div class="d-flex mt-3 border border-1 border-dark-subtle p-2">
+                <div
+                  class="d-flex flex-column flex-md-row mt-3 align-items-center border border-1 border-dark-subtle p-2">
                   <img
                     src="images/random_guy_1.jpg"
                     alt="random_guy"
-                    class="flex-shrink-0 rounded-circle ms-2 border border-3 border-black object-fit-cover"
+                    class="flex-shrink-0 rounded-circle me-3 border border-3 border-black object-fit-cover"
                     width="128"
                     height="128" />
-                  <div class="flex-grow-1 ms-4">
-                    <h1 class="mt-0">Sam</h1>
-                    <p>
+                  <div class="flex-grow-1">
+                    <h5 class="mt-0 mb-1">Sam</h5>
+                    <p class="text-warning mb-1">★★★★★</p>
+                    <p class="mb-0">
                       Absolutely loved the food! The biryani was delicious, perfectly cooked, and delivered on time.
                       Definitely ordering again!
                     </p>
                   </div>
                 </div>
-                <div class="d-flex mt-3 border border-1 border-dark-subtle p-2">
+
+                <div
+                  class="d-flex flex-column flex-md-row mt-3 align-items-center border border-1 border-dark-subtle p-2">
                   <img
                     src="images/random_girl_1.jpg"
                     alt="random_girl"
-                    class="flex-shrink-0 rounded-circle me-2 border border-3 border-black object-fit-cover"
+                    class="flex-shrink-0 rounded-circle me-3 border border-3 border-black object-fit-cover"
                     width="128"
                     height="128" />
-                  <div class="flex-grow-1 ms-4">
-                    <h1 class="mt-0">Priya</h1>
-                    <p>
+                  <div class="flex-grow-1">
+                    <h5 class="mt-0 mb-1">Priya</h5>
+                    <p class="text-warning mb-1">★★★★☆</p>
+                    <p class="mb-0">
                       Great experience! The food was fresh, the packaging was neat, and the desserts were amazing.
                       Highly recommended!
                     </p>
@@ -248,24 +256,25 @@
             </div>
           </div>
 
-          <div class="col-4 border border-1 rounded">
-            <h2 class="display-5"><u>Cart</u></h2>
+          <!-- Cart Section -->
+          <div class="col-12 col-md-4 border border-1 rounded">
+            <h2 class="display-5"><u>Your Cart</u></h2>
             <div class="container mt-4 mb-4">
               <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between">
-                  <p class="fs-5">Dosa</p>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="fs-5">Dosa</span>
                   <span class="badge text-bg-info rounded-4 p-3 fs-6">6</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <p class="fs-5">Shawarma</p>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="fs-5">Shawarma</span>
                   <span class="badge text-bg-info rounded-4 p-3 fs-6">2</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <p class="fs-5">Chicken Biryani</p>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <span class="fs-5">Chicken Biryani</span>
                   <span class="badge text-bg-info rounded-4 p-3 fs-6">2</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between border-top">
-                  <p class="fs-3">Total:</p>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-top fw-bold">
+                  <span class="fs-3">Total:</span>
                   <span class="badge text-bg-info fs-4 p-3">1160</span>
                 </li>
               </ul>
@@ -274,8 +283,8 @@
                 class="btn btn-lg btn-danger mt-4"
                 data-bs-title="Offer Terms"
                 data-bs-toggle="popover"
+                data-bs-trigger="focus"
                 data-bs-placement="bottom"
-                data-bs-custom-class="custom-popover"
                 data-bs-content="Get 50% off on your order up to Rs. 150. Valid only on Chicken Biryani. Applicable for a limited time only.">
                 Apply offer: BIRYANI50
               </button>
@@ -284,6 +293,7 @@
         </div>
       </div>
 
+      <!-- Checkout Section -->
       <div class="container mt-4 p-4 border border-2 border-danger-subtle rounded-2" id="Checkout">
         <h1 class="display-4 fw-bolder text-center text-decoration-underline">Checkout Form:</h1>
         <form action="#" class="was-validated mt-4">
@@ -296,7 +306,7 @@
                 id="fname"
                 name="fname"
                 placeholder="Enter First Name"
-                pattern="[A-Za-z]"
+                pattern="[A-Za-z ]+"
                 required />
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please Enter A Valid First Name.</div>
@@ -306,10 +316,10 @@
               <input
                 type="text"
                 class="form-control"
-                id="fname"
+                id="lname"
                 name="lname"
                 placeholder="Enter Last Name"
-                pattern="[A-Za-z]"
+                pattern="[A-Za-z ]+"
                 required />
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please Enter A Valid Last name.</div>
@@ -317,7 +327,7 @@
           </div>
           <div class="row mt-2">
             <div class="col-12">
-              <label for="Number" class="form-label fw-semibold fs-5">Moblie Number:</label>
+              <label for="Number" class="form-label fw-semibold fs-5">Mobile Number:</label>
               <input
                 type="tel"
                 class="form-control"
@@ -341,12 +351,12 @@
           </div>
           <div class="row mt-2 mb-4">
             <div class="col-12">
-              <label for="address" class="form-label fw-semibold fs-5">Payment Method:</label>
-              <br />
-              <div class="form-check-inline">
+              <p class="form-label fw-semibold fs-5 mb-1">Payment Method:</p>
+              <div class="form-check form-check-inline">
                 <input type="radio" class="form-check-input" id="UPI" name="payment" value="UPI" checked />
                 <label for="UPI" class="form-check-label fw-semibold fs-6">UPI</label>
-
+              </div>
+              <div class="form-check form-check-inline">
                 <input type="radio" class="form-check-input" id="COD" name="payment" value="COD" />
                 <label for="COD" class="form-check-label fw-semibold fs-6">Cash on Delivery</label>
               </div>
@@ -359,6 +369,7 @@
             <button type="reset" class="btn btn-lg btn-primary">Clear</button>
           </div>
 
+          <!-- Tracking Section -->
           <div class="container mt-4" id="tracking">
             <h5 id="status"></h5>
 
@@ -372,7 +383,7 @@
 
     <footer>
       <div
-        class="d-flex flex-column flex-md-row bg-dark text-white justify-content-between align-items-center mt-2 p-4 gap-2">
+        class="d-flex flex-column flex-md-row bg-dark text-white text-center justify-content-between align-items-center p-4 gap-2">
         <span>© 2026 Quick Bite. All Rights Reserved.</span>
         <span>
           <u>Support:</u>
@@ -392,9 +403,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+      // PopOver assign
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
       const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
 
+      // Placing Order Button and progress bar working
       function placingOrder() {
         let form = document.querySelector("form");
 
@@ -408,7 +421,6 @@
 
         setTimeout(function () {
           btn.innerHTML = "Place Order";
-          alert("Order placed!");
 
           let status = document.getElementById("status");
           let progress_bar = document.getElementById("progress");
