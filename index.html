@@ -283,13 +283,163 @@
           </div>
         </div>
       </div>
+
+      <div class="container mt-4 p-4 border border-2 border-danger-subtle rounded-2" id="Checkout">
+        <h1 class="display-4 fw-bolder text-center text-decoration-underline">Checkout Form:</h1>
+        <form action="#" class="was-validated mt-4">
+          <div class="row g-3">
+            <div class="col">
+              <label for="fname" class="form-label fw-semibold fs-5">First Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                name="fname"
+                placeholder="Enter First Name"
+                pattern="[A-Za-z]"
+                required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please Enter A Valid First Name.</div>
+            </div>
+            <div class="col">
+              <label for="lname" class="form-label fw-semibold fs-5">Last Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                name="lname"
+                placeholder="Enter Last Name"
+                pattern="[A-Za-z]"
+                required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please Enter A Valid Last name.</div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <label for="Number" class="form-label fw-semibold fs-5">Moblie Number:</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="Number"
+                name="Number"
+                placeholder="Enter number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please Enter A Valid Phone Number.</div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <label for="address" class="form-label fw-semibold fs-5">Delivery Address:</label>
+              <textarea name="address" id="address" class="form-control" rows="5" required></textarea>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please Enter A Valid Delivery Address.</div>
+            </div>
+          </div>
+          <div class="row mt-2 mb-4">
+            <div class="col-12">
+              <label for="address" class="form-label fw-semibold fs-5">Payment Method:</label>
+              <br />
+              <div class="form-check-inline">
+                <input type="radio" class="form-check-input" id="UPI" name="payment" value="UPI" checked />
+                <label for="UPI" class="form-check-label fw-semibold fs-6">UPI</label>
+
+                <input type="radio" class="form-check-input" id="COD" name="payment" value="COD" />
+                <label for="COD" class="form-check-label fw-semibold fs-6">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+          <div class="container d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-lg btn-primary" id="placeOrder" onclick="placingOrder()">
+              Place Order
+            </button>
+            <button type="reset" class="btn btn-lg btn-primary">Clear</button>
+          </div>
+
+          <div class="container mt-4" id="tracking">
+            <h5 id="status"></h5>
+
+            <div class="progress">
+              <div class="progress-bar bg-success" id="progress" style="width: 0%">0%</div>
+            </div>
+          </div>
+        </form>
+      </div>
     </main>
-    <footer></footer>
+
+    <footer>
+      <div
+        class="d-flex flex-column flex-md-row bg-dark text-white justify-content-between align-items-center mt-2 p-4 gap-2">
+        <span>© 2026 Quick Bite. All Rights Reserved.</span>
+        <span>
+          <u>Support:</u>
+          support@quickbite.com
+        </span>
+        <span>
+          <u>Working Hours:</u>
+          Monday - Sunday, 9:00 AM - 10:00 PM
+        </span>
+        <span>
+          <u>Contact:</u>
+          +91 9676961XXX
+        </span>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
       const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
+
+      function placingOrder() {
+        let form = document.querySelector("form");
+
+        if (!form.checkValidity()) {
+          return;
+        }
+
+        let btn = document.getElementById("placeOrder");
+        btn.innerHTML = "<span class='spinner-border spinner-border-sm'></span> Placing order...";
+        btn.disabled = true;
+
+        setTimeout(function () {
+          btn.innerHTML = "Place Order";
+          alert("Order placed!");
+
+          let status = document.getElementById("status");
+          let progress_bar = document.getElementById("progress");
+
+          setTimeout(function () {
+            progress_bar.style.width = "25%";
+            progress_bar.innerHTML = "25%";
+            status.innerHTML = "Order Placed";
+
+            setTimeout(function () {
+              progress_bar.style.width = "50%";
+              progress_bar.innerHTML = "50%";
+              status.innerHTML = "Preparing your food";
+
+              setTimeout(function () {
+                progress_bar.style.width = "75%";
+                progress_bar.innerHTML = "75%";
+                status.innerHTML = "On the way";
+
+                setTimeout(function () {
+                  progress_bar.style.width = "100%";
+                  progress_bar.innerHTML = "100%";
+                  status.innerHTML = "Delivered. Enjoy your meal!";
+
+                  btn.disabled = false;
+                }, 2000);
+              }, 2000);
+            }, 2000);
+          }, 2000);
+        }, 1500);
+      }
     </script>
   </body>
 </html>
